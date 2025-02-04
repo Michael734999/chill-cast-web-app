@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <>
-    ChillCast Initial setup and configuration
-    </>
-  )
+  return <>ChillCast Initial setup and configuration</>;
 }
 
-export default App
+export default App;
