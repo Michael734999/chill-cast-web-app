@@ -88,7 +88,11 @@ export const NavBar = (): JSX.Element => {
         <Box pb={4} display={{ md: 'none' }}>
           <Stack as={'nav'} spacing={4}>
             {Links.map((item) => (
-              <NavigationLink key={item.title} linkTo={item.href}>
+              <NavigationLink
+                onClick={() => onClose()}
+                key={item.title}
+                linkTo={item.href}
+              >
                 {item.title}
               </NavigationLink>
             ))}

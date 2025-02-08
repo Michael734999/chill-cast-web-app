@@ -30,10 +30,10 @@ export const SearchBar = ({
         pt={4}
         pb={2}
         alignItems="center"
-        width={{ base: '90%', sm: '80%' }}
+        width={'100%'}
         justifyContent="center"
         spacing={4}
-        px={6}
+        px={{ md: 6, sm: 2 }}
         margin="0 auto"
       >
         <InputGroup>
