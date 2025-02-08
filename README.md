@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Chill Cast Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chill Cast is a fast and responsive weather web app that provides real-time weather data for any location. Built using modern web technologies like React, TypeScript, Vite, and Chakra UI, this app ensures a smooth, lightweight, and interactive user experience.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time weather data: Get current weather conditions for any location worldwide.
+- Modern tech stack: Built with React, TypeScript, and Chakra UI for optimal performance and responsiveness.
+- User-friendly UI: Intuitive design powered by Chakra UI for accessible, customizable, and beautiful UI components.
+- Lightweight & Fast: Optimized for a fast and smooth user experience, powered by Vite for quick build times.
 
-## Expanding the ESLint configuration
+# Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React: A popular JavaScript library for building user interfaces.
+- TypeScript: A statically typed superset of JavaScript, improving code quality and reliability.
+- Vite: A next-generation, fast, and highly optimized build tool.
+- Chakra UI: A component library that provides customizable and accessible UI elements for faster development.
+- WeatherAPI: Used for fetching real-time weather data. (The reason for not using the WeatherStackApi, is because only current weather is available on the free tier)
+- EmailJS: Used for sending emails directly from the frontend (optional integration).
 
-- Configure the top-level `parserOptions` property like this:
+# Run Locally
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To get started, clone the repository and install dependencies:
+
+```sh
+cd chill-cast-web-app
+yarn install
+
+To start the application, run
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This will start a development server, and you can open your browser to http://localhost:3000 to view the app.
+
+# Environment Variables
+
+To use email functionality and WeatherAPI, you’ll need to set up your .env file with the following variables:
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+VITE_WEATHER_API_KEY=yourKey
+VITE_WEATHER_API_URL=https://api.weatherapi.com/v1/
+VITE_EMAIL_API_KEY=yourKey
+VITE_EMAIL_SERVICE_ID=yourKey
+VITE_EMAIL_TEMPLATE_ID=yourKey
 ```
+
+Please request these keys via email: mmoore4361@gmail.com.
+
+# Running Tests with Vitest
+
+You can run tests using the following command:
+
+```sh
+for running tests
+yarn test
+
+for a full test coverage report
+yarn coverage
+```
+
+# Pre-commit Linting check with Husky
+
+To maintain high code quality and enforce consistent coding standards, I’ve implemented a pre-commit hook using Husky. This hook automatically runs whenever a commit is made, ensuring that code is properly linted and formatted before being committed to the repository. By integrating Husky, the pre-commit hook helps catch common issues such as syntax errors, unused variables, and inconsistent code styles, which can be automatically fixed through Lint-Staged.
