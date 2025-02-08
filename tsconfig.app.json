@@ -12,7 +12,11 @@
     "paths": {
       "@components/*": ["components/*"],
       "@assets/*": ["assets/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@theme/*": ["theme/*"],
+      "@routes/*": ["routes/*"],
+      "@providers/*": ["providers/*"],
+      "@features/*": ["features/*"]
     },
 
     /* Bundler mode */
@@ -30,5 +34,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "src/types/svg.d.ts"]
 }

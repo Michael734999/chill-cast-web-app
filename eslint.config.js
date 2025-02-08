@@ -38,6 +38,18 @@ export default tseslint
         ],
         ...react.configs.recommended.rules,
         ...react.configs['jsx-runtime'].rules,
+        '@typescript-eslint/no-explicit-any': [
+          'error',
+          {
+            fixToUnknown: true,
+          },
+        ],
+        '@typescript-eslint/unbound-method': [
+          'warn',
+          {
+            ignoreStatic: true,
+          },
+        ],
       },
     }
   )
