@@ -50,14 +50,15 @@ export const InfoCard = ({
       <Card
         align="center"
         bgGradient="linear(to-t, background.darkBlue, background.secondary)"
-        width={'90%'}
-        minHeight={{ sm: '120vh', md: '55vh' }}
+        width={{ sm: '100%', md: '90%' }}
+        rounded={{ sm: 0, md: 20 }}
+        minHeight={{ sm: '100vh', md: '55vh' }}
+        margin={{ sm: 0, md: 12 }}
         p={4}
         display="flex"
         flexDirection="column"
         justifyContent="center"
         color={'foreground.light'}
-        margin={14}
       >
         <SearchBar
           onSearch={fetchWeatherData}
@@ -106,14 +107,15 @@ export const InfoCard = ({
       <Card
         align="center"
         bgGradient="linear(to-t, background.darkBlue, background.secondary)"
-        width={'90%'}
-        minHeight={{ sm: '120vh', md: '55vh' }}
+        width={{ sm: '100%', md: '90%' }}
+        rounded={{ sm: 0, md: 20 }}
+        minHeight={{ sm: '100vh', md: '55vh' }}
+        margin={{ sm: 0, md: 12 }}
         p={4}
         display="flex"
         flexDirection="column"
         justifyContent="center"
         color={'foreground.light'}
-        margin={14}
       >
         <SearchBar
           onSearch={fetchWeatherData}
@@ -131,11 +133,12 @@ export const InfoCard = ({
     <Card
       align="center"
       bgGradient="linear(to-t, background.darkBlue, background.secondary)"
-      width={'90%'}
-      minHeight="55vh"
+      width={{ sm: '100%', md: '90%' }}
+      rounded={{ sm: 0, md: 20 }}
+      minHeight={{ sm: '120vh', md: '55vh' }}
+      margin={{ sm: 0, md: 12 }}
       p={4}
       color={'foreground.light'}
-      margin={14}
     >
       <SearchBar
         onSearch={fetchWeatherData}
