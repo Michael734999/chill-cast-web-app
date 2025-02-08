@@ -50,10 +50,10 @@ export const InfoCard = ({
       <Card
         align="center"
         bgGradient="linear(to-t, background.darkBlue, background.secondary)"
-        width={{ sm: '100%', md: '90%' }}
-        rounded={{ sm: 0, md: 20 }}
-        minHeight={{ sm: '100vh', md: '55vh' }}
-        margin={{ sm: 0, md: 12 }}
+        width={{ base: '100%', md: '90%' }}
+        rounded={{ base: 0, md: 20 }}
+        minHeight={{ base: '100vh', md: '55vh' }}
+        margin={{ base: 0, md: 12 }}
         p={4}
         display="flex"
         flexDirection="column"
@@ -72,7 +72,7 @@ export const InfoCard = ({
           align="center"
           flexGrow={1}
         >
-          <Heading p={8} size={{ sm: 'md', md: 'lg' }}>
+          <Heading p={8} size={{ base: 'md', md: 'lg' }}>
             {error}
           </Heading>
           <Image
@@ -107,10 +107,10 @@ export const InfoCard = ({
       <Card
         align="center"
         bgGradient="linear(to-t, background.darkBlue, background.secondary)"
-        width={{ sm: '100%', md: '90%' }}
-        rounded={{ sm: 0, md: 20 }}
-        minHeight={{ sm: '100vh', md: '55vh' }}
-        margin={{ sm: 0, md: 12 }}
+        width={{ base: '100%', md: '90%' }}
+        rounded={{ base: 0, md: 20 }}
+        minHeight={{ base: '100vh', md: '55vh' }}
+        margin={{ base: 0, md: 12 }}
         p={4}
         display="flex"
         flexDirection="column"
@@ -133,10 +133,10 @@ export const InfoCard = ({
     <Card
       align="center"
       bgGradient="linear(to-t, background.darkBlue, background.secondary)"
-      width={{ sm: '100%', md: '90%' }}
-      rounded={{ sm: 0, md: 20 }}
-      minHeight={{ sm: '120vh', md: '55vh' }}
-      margin={{ sm: 0, md: 12 }}
+      width={{ base: '100%', md: '90%' }}
+      rounded={{ base: 0, md: 20 }}
+      minHeight={{ base: '120vh', md: '55vh' }}
+      margin={{ base: 0, md: 12 }}
       p={4}
       color={'foreground.light'}
     >
@@ -176,8 +176,8 @@ export const InfoCard = ({
         fontSize={'md'}
       >
         <SimpleGrid
-          columns={{ sm: 2, md: 4, lg: 7 }}
-          spacing={6}
+          columns={{ md: 4, lg: 7, base: 2 }}
+          spacing={4}
           px={2}
           alignItems={'center'}
           textAlign={'center'}
