@@ -35,13 +35,13 @@ export const EmailForm = (): JSX.Element => {
         align="center"
         justify={'center'}
         bgColor="white"
-        width={'65%'}
+        width={{ md: '65%', sm: '70%', base: '90%' }}
         boxShadow="xl"
-        p={4}
+        p={{ md: 4, sm: 3, base: 1 }}
         margin="0 auto"
       >
         <CardHeader width={'100%'} textAlign={'left'}>
-          <Heading size="lg">Send me an Email</Heading>
+          <Heading size={{ md: 'lg', base: 'md' }}>Send me an Email</Heading>
         </CardHeader>
         <CardBody width={'100%'}>
           <Stack spacing={4}>
@@ -66,7 +66,7 @@ export const EmailForm = (): JSX.Element => {
         <CardFooter
           justifyContent={'center'}
           alignItems={'center'}
-          width={'40%'}
+          width={{ md: '40%', sm: '60%', base: '80%' }}
         >
           <Button
             bg="background.darkBlue"
