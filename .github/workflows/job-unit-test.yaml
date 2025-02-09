@@ -21,5 +21,19 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Set environment variables
+        env:
+          VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
+          VITE_WEATHER_API_URL: ${{ secrets.VITE_WEATHER_API_URL }}
+          VITE_EMAIL_API_KEY: ${{ secrets.VITE_EMAIL_API_KEY }}
+          VITE_EMAIL_SERVICE_ID: ${{ secrets.VITE_EMAIL_SERVICE_ID }}
+          VITE_EMAIL_TEMPLATE_ID: ${{ secrets.VITE_EMAIL_TEMPLATE_ID }}
+        run: |
+          echo "VITE_WEATHER_API_KEY=$VITE_WEATHER_API_KEY" >> .env
+          echo "VITE_WEATHER_API_URL=$VITE_WEATHER_API_URL" >> .env
+          echo "VITE_EMAIL_API_KEY=$VITE_EMAIL_API_KEY" >> .env
+          echo "VITE_EMAIL_SERVICE_ID=$VITE_EMAIL_SERVICE_ID" >> .env
+          echo "VITE_EMAIL_TEMPLATE_ID=$VITE_EMAIL_TEMPLATE_ID" >> .env
+
       - name: Run tests
         run: yarn test
