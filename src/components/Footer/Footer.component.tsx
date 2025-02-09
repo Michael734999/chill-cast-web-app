@@ -5,9 +5,10 @@ import LinkedinIcon from '@assets/linkedin.svg?react';
 export const Footer = (): JSX.Element => {
   return (
     <Box
-      minHeight={'10vh'}
       color={'foreground.light'}
-      p={8}
+      p={6}
+      justifyContent={'center'}
+      alignItems={'center'}
       backgroundColor={'background.accent'}
       as="footer"
     >

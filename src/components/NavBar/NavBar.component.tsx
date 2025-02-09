@@ -64,7 +64,17 @@ export const NavBar = (): JSX.Element => {
         </HStack>
         <Flex pr={6} alignItems={'center'}>
           <Button
-            disabled={weatherUnit === WeatherUnits.CELCIUS}
+            bg={
+              weatherUnit === WeatherUnits.CELCIUS
+                ? 'background.light'
+                : 'rgba(178, 178, 178, 0.74)'
+            }
+            _hover={{
+              bg:
+                weatherUnit === WeatherUnits.CELCIUS
+                  ? 'background.light'
+                  : 'rgba(203, 215, 240, 0.30)',
+            }}
             size={'xs'}
             onClick={() => setWeatherUnitData(WeatherUnits.CELCIUS)}
             rounded={0}
@@ -73,7 +83,17 @@ export const NavBar = (): JSX.Element => {
             &deg;C
           </Button>
           <Button
-            disabled={weatherUnit === WeatherUnits.FERINHEIGHT}
+            bg={
+              weatherUnit === WeatherUnits.FERINHEIGHT
+                ? 'background.light'
+                : 'rgba(178, 178, 178, 0.74)'
+            }
+            _hover={{
+              bg:
+                weatherUnit === WeatherUnits.CELCIUS
+                  ? 'rgba(203, 215, 240, 0.30)'
+                  : 'background.light',
+            }}
             size={'xs'}
             onClick={() => setWeatherUnitData(WeatherUnits.FERINHEIGHT)}
             rounded={0}
