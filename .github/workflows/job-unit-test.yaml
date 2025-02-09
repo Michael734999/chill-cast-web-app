@@ -6,6 +6,7 @@ on:
 
 jobs:
   unit-test:
+    name: Run Unit tests
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -16,6 +17,9 @@ jobs:
 
       - name: Install Yarn
         run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
 
       - name: Run tests
         run: yarn test
