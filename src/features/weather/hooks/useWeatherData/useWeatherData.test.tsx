@@ -97,9 +97,6 @@ describe('useWeatherData', () => {
     const { result, waitForNextUpdate } = renderHook(() => useWeatherData());
 
     await waitForNextUpdate();
-
-    console.log('Weather Data:', result.current.weatherData);
-
     expect(global.fetch).toHaveBeenCalledTimes(2);
     expect(result.current.loading).toBe(false);
     expect(result.current.weatherData).toBeDefined();

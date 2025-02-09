@@ -8,8 +8,8 @@ import {
 } from '@features/weather/types';
 
 export const useWeatherData = (): UseWeatherDataReturn => {
-  const [lat, setLat] = useState<number>(0);
-  const [long, setLong] = useState<number>(0);
+  const [lat, setLat] = useState<number | undefined>(undefined);
+  const [long, setLong] = useState<number | undefined>(undefined);
   const { weatherData, setWeatherData } = useAppContext();
 
   const [loading, setLoading] = useState(false);
@@ -40,10 +40,6 @@ export const useWeatherData = (): UseWeatherDataReturn => {
           const historicalWeatherResponse =
             (await res[1].json()) as WeatherApiDataProps;
 
-          console.log(
-            'Please please please lof thissssss',
-            historicalWeatherResponse
-          );
           if (
             forecastWeatherResponse?.error ||
             historicalWeatherResponse?.error
@@ -108,7 +104,6 @@ export const useWeatherData = (): UseWeatherDataReturn => {
         setLong(position.coords.longitude);
       },
       () => {
-        console.log('Does it reach this case');
         fetchWeatherData(WeatherSearchVariant.CITY, 'Johannesburg');
       }
     );

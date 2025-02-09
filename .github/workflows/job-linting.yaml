@@ -1,0 +1,21 @@
+name: 'Linting check'
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  linting-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Run linting
+        run: yarn lint
