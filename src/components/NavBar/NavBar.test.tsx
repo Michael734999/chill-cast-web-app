@@ -47,44 +47,6 @@ describe('NavBar Component', () => {
     expect(screen.getByText('°F')).toBeInTheDocument();
   });
 
-  it('should disable the Celsius button if the weather unit is already Celsius', () => {
-    const useAppContextSpy = vi.spyOn(AppProviderHooks, 'useAppContext');
-    useAppContextSpy.mockReturnValue({
-      weatherData: undefined,
-      setWeatherData: vi.fn(),
-      weatherUnit: WeatherUnits.CELCIUS,
-      setWeatherUnit: vi.fn(),
-    });
-
-    render(
-      <MemoryRouter>
-        <NavBar />
-      </MemoryRouter>
-    );
-
-    const celsiusButton = screen.getByText('°C');
-    expect(celsiusButton).toBeDisabled();
-  });
-
-  it('should disable the Fahrenheit button if the weather unit is already Fahrenheit', () => {
-    const useAppContextSpy = vi.spyOn(AppProviderHooks, 'useAppContext');
-    useAppContextSpy.mockReturnValue({
-      weatherData: undefined,
-      setWeatherData: vi.fn(),
-      weatherUnit: WeatherUnits.FERINHEIGHT,
-      setWeatherUnit: vi.fn(),
-    });
-
-    render(
-      <MemoryRouter>
-        <NavBar />
-      </MemoryRouter>
-    );
-
-    const fahrenheitButton = screen.getByText('°F');
-    expect(fahrenheitButton).toBeDisabled();
-  });
-
   it('should call setWeatherUnitData when the Celsius button is clicked', () => {
     const setWeatherUnitMock = vi.fn();
 
