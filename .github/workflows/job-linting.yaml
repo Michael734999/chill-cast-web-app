@@ -6,7 +6,7 @@ on:
 
 jobs:
   linting-check:
-    name: Run Unit tests
+    name: Run Linting
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
